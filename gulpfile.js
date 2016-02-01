@@ -30,6 +30,7 @@ var notify = function(error) {
   }
 
   notifier.notify({title: title, message: message});
+  console.log("title: "+title+", message: "+message);
 };
 
 var bundler = watchify(browserify({
