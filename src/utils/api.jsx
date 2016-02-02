@@ -11,5 +11,17 @@ module.exports = window.api = {
     .then(function(response) {
       return response.json()
     });
+  },
+
+  post: function(url,data) {
+    return fetch(rootUrl+url, {
+      method: 'post',
+      body: data,
+      headers: {
+        'Authorization':'Client-ID ' + apiKey
+      }
+    }).then(function(response) {
+      return response.json()
+    });
   }
 }

@@ -4,6 +4,7 @@ var Link = ReactRouter.Link;
 var Actions = require('../actions')
 var TopicStore = require('../stores/topic-store');
 var Reflux = require('reflux');
+var ImageUpload = require('./image-upload');
 
 module.exports = React.createClass({
   mixins:[Reflux.listenTo(TopicStore,"onChange")],
@@ -23,6 +24,9 @@ module.exports = React.createClass({
         </Link>
         <ul className="nav navbar-nav navbar-right">
           {this.renderTopics()}
+        </ul>
+        <ul className="nav navbar-nav navbar-left">
+          <ImageUpload/>
         </ul>
       </div>
     </nav>
