@@ -24,11 +24,11 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-        <div>
-          <Dropzone onDrop={this.onDrop} className="alert alert-info" disableClick="true" multiple="false">
-            <div>Try dropping some files here, or click to select files to upload.</div>
-          </Dropzone>
-        </div>
+          <div className="navbar-form navbar-left image-upload">
+            <Dropzone onDrop={this.onDrop} className="btn btn-info" disableClick="true" multiple="false">
+              <div>Drop to upload</div>
+            </Dropzone>
+          </div>
     );
   },
   onChange: function(event, image) {
